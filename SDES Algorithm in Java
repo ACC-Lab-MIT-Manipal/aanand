@@ -20,7 +20,7 @@ public class SDES
       encrypt = Cipher.getInstance("DES/CBC/PKCS5Padding");  
       encrypt.init(Cipher.ENCRYPT_MODE, scrtkey, aps);  
       decrypt = Cipher.getInstance("DES/CBC/PKCS5Padding");  
-      decrypt.init(Cipher.DECRYPT_MODE, scrtkey, aps);  
+      decrypt.init(Cipher.DECRYPT_MODE, scrtkey, aps); 
       encryption(new FileInputStream(textFile), new FileOutputStream(encryptedData));  
       decryption(new FileInputStream(encryptedData), new FileOutputStream(decryptedData));  
       System.out.println("The encrypted and decrypted files have been created successfully.");  
